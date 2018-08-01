@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Map extends Component {
+class Quakes extends Component {
     constructor() {
         super();
 
@@ -31,4 +31,4 @@ class Map extends Component {
 
 
 
-export default Map;
+export default Quakes;
