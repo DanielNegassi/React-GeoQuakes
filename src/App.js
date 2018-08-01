@@ -30,19 +30,19 @@ class App extends Component {
       }
       componentDidMount() {
         this.getQuakes().then((quakeData) => {
-            this.setState({quakes:quakeData});
+            this.setState({quakes:quakeData.features});
         })
     }
   render() {
+    console.log(this.state);
     return (
       <div className="app">
-        
         <div className="mapContainer">
           <Map/>
         </div>
         <div className="quakeContainer">
           <h1>Earthquakes from the past week: </h1>
-          <Quakes/>
+          <Quakes quakes={this.state.quakes}/>
         </div>
       </div>
     );
